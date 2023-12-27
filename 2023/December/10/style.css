@@ -1,0 +1,116 @@
+/* Add CSS here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.body-content {
+  background-color: #2d6060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feedback-container {
+  background-color: #fff;
+  height: 750px;
+  width: 800px;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+.feedback-area {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.feedback-title {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 2.2rem;
+}
+.feedback-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.feedback-paragraph {
+  color: #6d696d;
+  text-align: center;
+  margin: 1.4rem 4.5rem;
+}
+
+.feedback-icon-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.feedback-icon-container small {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  color: #adadad;
+  opacity: 0.8;
+}
+
+.feedback-icon-item {
+  font-size: 4rem;
+  border: 1px solid #dddada;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.feedback-icon-item.active {
+  border: 1px solid blue;
+  background-color: #f7f4fa;
+}
+.feedback-icon-item.active > small {
+  opacity: 1;
+  color: #000;
+}
+.feedback-share {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  margin-left: 2.5rem;
+}
+.feedback-textarea {
+  width: 90%;
+  height: 110px;
+  background-color: #fcf8f8;
+  position: relative;
+  padding: 1px;
+  cursor: auto;
+  font-size: 1.2rem;
+}
+.feedback-textarea::placeholder {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+.feedback-button {
+  font-family: inherit;
+  background-color: #224ff3ea;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 45px;
+  font-weight: 500;
+  display: block;
+  margin: 1rem auto 2.2rem;
+}
+.feedback-button:hover {
+  cursor: pointer;
+}
+.feedback-button:active {
+  transform: scale(1.1);
+}
