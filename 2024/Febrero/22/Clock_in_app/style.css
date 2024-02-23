@@ -1,0 +1,333 @@
+/* Add CSS here */
+:root {
+  --color-primary: hsl(0, 8%, 80%);
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  min-width: 330px;
+  min-height: 600px;
+  border-radius: 8px 8px 0 0;
+  margin-top: 8rem;
+  border: 1px solid hsl(0, 1%, 68%);
+  border-radius: 8px;
+  background-color: hsla(0, 47%, 91%, 0.568);
+}
+
+.card header {
+  background-color: hsla(17, 81%, 56%, 0.925);
+  height: 60px;
+  border-radius: 8px 8px 0 0;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 15px;
+  border-radius: 50%;
+  color: hsl(0, 0%, 100%);
+}
+
+.clock {
+  width: 150px;
+  height: 150px;
+  border: 6px solid var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  margin: 0.5rem 0 0.5rem;
+}
+
+.clock-title {
+  color: hsl(0, 2%, 55%);
+  position: relative;
+  margin: 1rem auto;
+}
+
+.clock-title div::before {
+  content: "";
+  width: 1.5px;
+  height: 150px;
+  background-color: hsl(0, 6%, 67%);
+  position: absolute;
+  top: -30px;
+  right: 45px;
+  transform: rotate(90deg);
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.clock-point {
+  height: 10px;
+  width: 10px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+  border: 4px solid var(--color-primary);
+  top: 69px;
+  left: 69px;
+}
+
+.clock-hour::before,
+.clock-point::before,
+.clock-point::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background-color: var(--color-primary);
+}
+
+.clock-point::before {
+  position: absolute;
+  transform: rotate(-90deg);
+  top: -16px;
+  left: -5px;
+}
+
+.clock-point::after {
+  position: absolute;
+  transform: rotate(180deg);
+  top: 5px;
+  right: 10px;
+}
+
+.clock-hour::before {
+  top: 25px;
+  right: 22px;
+  bottom: 70px;
+  transform: rotate(-45deg);
+}
+
+.clock-hour div:nth-child(1)::before {
+  top: 79px;
+  right: 0.01px;
+  transform: rotate(-180deg);
+}
+
+.clock-hour div:nth-child(3)::before {
+  top: 140px;
+  right: 62px;
+  bottom: 2px;
+  transform: rotate(-91deg);
+}
+
+.clock-hour:nth-child(4)::before {
+  top: 120px;
+  left: 21px;
+  bottom: 180px;
+  transform: rotate(-45deg);
+}
+
+.clock-hour:nth-child(5)::before {
+  top: 79px;
+  left: 0.01px;
+  transform: rotate(180deg);
+}
+
+.clock-hour:nth-child(6)::before {
+  bottom: 120px;
+  left: 21px;
+  transform: rotate(45deg);
+}
+
+.clock-hour:nth-child(7)::before {
+  bottom: 120px;
+  right: 62px;
+  top: 7px;
+  transform: rotate(90deg);
+}
+
+.clock-hour:nth-child(8)::before {
+  top: 79px;
+  right: 1px;
+  transform: rotate(180deg);
+}
+
+.clock-hour:nth-child(9)::before {
+  top: 140px;
+  right: 62px;
+  transform: rotate(-90deg);
+}
+
+i .fa-circle-question {
+  position: absolute;
+  top: 110px;
+  right: 2px;
+  font-size: 2.5rem;
+  background-color: #fff;
+  font-weight: normal;
+  color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.logged-message {
+  font-weight: normal;
+  font-size: 1.2rem;
+  max-width: calc(180rem / 16);
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.button-orange {
+  position: relative;
+  left: 100px;
+  top: 100px;
+  background-color: hsla(17, 81%, 56%, 0.925);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.button-orange::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 1.8px;
+  background-color: #fff;
+  top: 30px;
+  left: 14.5px;
+}
+
+.button-orange::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 1.8px;
+  background-color: #fff;
+  top: 30px;
+  left: 14.5px;
+  transform: rotate(90deg);
+}
+
+.select-hour {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.select-hour label {
+  font-weight: bold;
+  color: hsl(0, 2%, 37%);
+}
+
+.select-hour select {
+  width: 300px;
+  height: 40px;
+  color: hsl(0, 6%, 54%);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.button-select {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 5px;
+  height: 45px;
+  position: relative;
+}
+
+.button-select button:first-child {
+  font-size: 1.5rem;
+  color: hsl(0, 2%, 37%);
+  background-color: hsla(0, 9%, 96%, 0.938);
+  border: 1px solid hsla(0, 80%, 71%, 0.336);
+  font-weight: normal;
+}
+
+.button-select button:nth-child(2) {
+  background-color: hsla(0, 1%, 49%, 0.274);
+  border: none;
+}
+
+.button-select button:nth-child(2):before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: hsla(0, 2%, 37%, 0.5);
+  top: 22.5px;
+  left: 170px;
+}
+
+.button-select button:nth-child(2):after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: hsla(0, 2%, 37%, 0.5);
+  top: 22.5px;
+  left: 170px;
+  transform: rotate(-90deg);
+}
+
+.button-select button:last-child {
+  background-color: hsla(0, 1%, 49%, 0.274);
+  border: none;
+}
+
+.button-select button:last-child:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: hsla(0, 2%, 37%, 0.5);
+  top: 22.5px;
+  left: 250px;
+}
+
+.button-save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button-save button {
+  width: 115px;
+  height: 45px;
+}
+
+.button-save button:first-child {
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  font-size: 1.05rem;
+  color: hsla(0, 2%, 37%, 0.5);
+}
+
+.button-save button:last-child {
+  background-color: hsla(17, 81%, 56%, 0.925);
+  border: none;
+  font-size: 1.05rem;
+  color: hsla(0, 0%, 100%);
+}
+.select-card {
+  background-color: hsla(0, 0%, 100%, 0.719);
+  padding: 0.5rem;
+  height: 220px;
+}

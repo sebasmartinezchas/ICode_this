@@ -1,0 +1,67 @@
+/* Add CSS here */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsla(170, 31%, 20%, 1);
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+.arrows {
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.arrows i {
+  background-color: rgb(18, 39, 36);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: hsl(0, 1%, 45%);
+  margin: 0 2rem;
+  border-radius: 4px;
+}
+
+.countdown-boxes {
+  display: flex;
+  gap: 2rem;
+}
+
+.countdown-boxes div {
+  background-color: hsla(60, 2%, 9%, 0.884);
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.countdown-boxes div p {
+  font-size: 10rem;
+  color: hsl(352, 36%, 38%);
+  position: absolute;
+  transform: translate(50px, 50px);
+
+}
