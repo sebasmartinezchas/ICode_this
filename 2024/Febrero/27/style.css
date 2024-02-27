@@ -1,0 +1,135 @@
+/* Add CSS here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+
+}
+
+.container {
+    max-width: 750px;
+    min-height: 80vh;
+    margin: 0 auto;
+
+}
+
+header {
+    position: relative;
+    background-color: hsla(248, 100%, 14%, 1);
+    margin-top: 70px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+header span,
+main span {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    color: hsl(0deg 1.73% 61.06%);
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px 10px 40px;
+
+}
+
+.header-top i {
+    font-size: 4rem;
+    color: hsl(0, 0%, 100%);
+    width: 200px;
+
+}
+
+.header-top h1 {
+    color: hsl(0, 0%, 100%);
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: left;
+    padding-right: 90px;
+
+}
+
+.header-bottom,
+.main-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 130px;
+}
+
+.header-bottom button,
+.main-bottom button {
+    padding: 12px 30px;
+    margin-top: 16px;
+    cursor: pointer;
+
+}
+
+.header-bottom button:first-child,
+.main-bottom button:first-child {
+    background-color: hsla(200, 100%, 48%, 1);
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.header-bottom button:nth-child(2),
+.main-bottom button:nth-child(2) {
+    background-color: transparent;
+    color: hsla(200, 100%, 48%, 1);
+    font-size: 1.2rem;
+    border: none;
+}
+
+main {
+    background-color: #fff;
+    height: 450px;
+    margin-top: 14px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.main-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main-top i {
+    font-size: 5rem;
+    margin-top: 5rem;
+    background: hsl(0, 14%, 95%);
+    border-radius: 50%;
+    padding: 2rem;
+    transform: rotate(-15deg);
+}
+
+.main-top h2 {
+    color: hsl(0, 0%, 0%);
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 50%;
+    text-align: center;
+
+}
+
+.main-bottom button {
+    padding: 18px 30px;
+    margin-top: 36px;
+    transform: translate(50%, 50%);
+}
