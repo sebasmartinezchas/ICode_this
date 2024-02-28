@@ -1,0 +1,104 @@
+/* Add CSS here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 40px;
+    text-align: center;
+    text-shadow: 3px 3px 2px hsl(0, 1%, 60%);
+}
+
+body {
+    font-family: "Dosis", sans-serif;
+}
+
+.container {
+    background-color: hsl(214, 40%, 88%);
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6rem 12rem;
+}
+
+.search {
+    position: relative;
+}
+
+.search input {
+    width: 250px;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid rgb(190, 183, 183);
+    background-color: hsl(0, 0%, 90%);
+}
+
+.search input::placeholder {
+    font-size: 1.5rem;
+    padding-left: 48px;
+    color: hsl(240, 38%, 44%);
+}
+
+
+.search i {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 2.5rem;
+}
+
+.sort select {
+    appearance: none;
+}
+
+.sort select {
+    padding: 15px 15px;
+    border-radius: 6px;
+    background-color: #3f3e88;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+        cursor: pointer;
+
+
+}
+
+.sort div::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 4px;
+    background: hsl(0, 5%, 96%);
+    top: 195px;
+    right: 415px;
+    transform: rotate(50deg);
+    margin-top: 5px;
+
+
+}
+
+.sort div::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 4px;
+    background: hsl(0, 5%, 96%);
+    top: 195px;
+    right: 430px;
+    transform: rotate(130deg);
+    margin-top: 5px;
+    cursor: pointer;
+
+}
