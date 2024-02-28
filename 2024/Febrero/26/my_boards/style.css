@@ -11,10 +11,13 @@ body {
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: 70vh;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 100px auto;
+  box-shadow: 10px 10px 5px 10px hsl(0, 3%, 53%);
+  border-radius: 4px;
+
 }
 
 .navbar {
@@ -22,7 +25,6 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: hsla(0, 1%, 45%, 0.11);
-  margin-top: 80px;
 }
 
 .navbar div:first-child {
@@ -34,8 +36,6 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-
-
 }
 
 .navbar-right {
@@ -46,7 +46,6 @@ body {
   height: 90px;
   gap: 24px;
   position: relative;
-
 
 }
 
@@ -86,7 +85,6 @@ body {
   height: 40px;
   border-radius: 40%;
   font-size: 1.2rem;
-
 }
 
 .navbar-right div i {
@@ -101,7 +99,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 100px;
-
 }
 
 .boards h1 {
@@ -147,31 +144,38 @@ body {
   top: 150px;
   left: 30%;
   bottom: 0;
+  z-index: 1;
+}
 
-}
-.create-boards{
-  margin: 350px auto;
+.create-boards {
+  margin: 40px auto;
   text-align: center;
- 
+  position: relative;
+  z-index: 100;
 }
-.create-boards h2{
+
+.create-boards h2 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   color: hsl(240, 74%, 35%);
   margin-bottom: 24px;
-
 }
-.create-boards p{
+
+.create-boards p {
   font-size: 0.9rem;
   color: hsl(239, 26%, 63%);
   line-height: 1.5;
 }
-.create-boards span{
+
+.create-boards span {
   font-size: 1.3rem;
   font-weight: bold;
 }
-.image{
-  width: 50px;
-  height: 50px;
+
+.half-circle .image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }

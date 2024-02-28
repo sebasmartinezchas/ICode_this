@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: hsla(170, 31%, 20%, 1);
-  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 main {
@@ -63,30 +63,14 @@ h1 {
   color: hsl(352, 36%, 38%);
   position: absolute;
   transform: translate(50px, 50px);
-
 }
-.countdown-boxes div span{
-    color: hsl(34, 78%, 91%);
-    font-size: 3rem;
-    transform: rotate(-90deg);
-    position:absolute;
-    top: 110px;
-    width: 80px;
-    left: 5px;
-    height: 80px;
-}
-.reset{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom:5rem;
-    padding: 10px 25px;
-    border-radius: 5px;
-    background: transparent;
-    font-weight: 700;
-    display: inline-block;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
+.countdown-boxes div span {
+  color: hsl(34, 78%, 91%);
+  font-size: 3rem;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 110px;
+  width: 80px;
+  left: 5px;
+  height: 80px;
 }
