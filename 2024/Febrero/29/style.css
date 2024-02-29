@@ -1,0 +1,86 @@
+/* Add CSS here */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-color: hsla(0, 25%, 94%, 0.61);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 350px;
+  max-height: 80vh;
+  background-color: hsla(0, 14%, 89%, 0.705);
+  border-radius: 5px;
+}
+
+.card header h1 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  max-width: 150px;
+  text-align: center;
+  color: hsl(231, 70%, 59%);
+  margin: 25px auto;
+}
+
+.card-body :is(div:first-child, div:nth-child(2), div:nth-child(3)) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 300px;
+  max-height: 600px;
+  background-color: hwb(0 100% 0% / 0.281);
+  margin: 18px;
+  cursor: pointer;
+}
+.card-body :is(div:first-child:hover, div:nth-child(2):hover, div:nth-child(3):hover) {
+    border: none;
+    background-color: #a59f9f;
+ 
+  }
+
+.card-body :is(div:first-child i, div:nth-child(2) i, div:nth-child(3) i) {
+  font-size: 2rem;
+  padding-top: 24px;
+}
+
+.card-body
+  :is(div:first-child span, div:nth-child(2) span, div:nth-child(3) span) {
+  font-size: 1.5rem;
+  padding: 0 0 18px;
+  font-weight: 600;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+  height: 50px;
+  margin-bottom: 24px; 
+  border: none;
+  background-color:hsla(63, 78%, 56%, 0.555);
+  padding: 5px 51px;
+  cursor: pointer;
+}
+button:hover{
+    background-color: #ddd0d0;
+}
+button p{
+    font-size: 2.5rem;
+    color: white;
+}
+
+
