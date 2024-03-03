@@ -1,0 +1,183 @@
+/* Add CSS here */
+/*Reset default styles */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: #bbb8b877;
+}
+
+.container {
+  width: max(320px, 50vw);
+  height: max(600px, 50vh);
+  background: #fff;
+  margin: 150px auto;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity cubic-bezier(0, 0, 1, 1) 2s;
+  margin: 15rem;
+}
+
+header {
+  position: relative;
+}
+
+header i {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.5rem;
+  color: hsla(0, 9%, 68%, 0.829);
+  cursor: pointer;
+}
+
+.header-text {
+  padding: 50px;
+}
+
+.header-text h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.header-text p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.app-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem;
+}
+.app-cards div i {
+  font-size: 2rem;
+  color: hsla(240, 46%, 61%, 0.678);
+}
+
+.phone,
+.qr-code,
+.link {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  max-width: max(100px, 25%);
+  padding: 40px;
+  height: 50px;
+  border: 12px solid rgb(110 105 105/0.164);
+  border-radius: 8px;
+  flex-basis: 100%;
+  text-align: center;
+  transition: all ease-in 0.4s;
+}
+.phone:hover,
+.qr-code:hover,
+.link:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(42, 42, 94, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: max(320px, 50vw);
+    height: max(900px, 50vh);
+    margin: 10rem auto;
+  }
+
+  .header-text {
+    padding: 20px;
+  }
+
+  .header-text h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .header-text p {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .app-cards {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .app-cards p {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 5rem auto;
+  }
+  .app-cards {
+    padding: 1rem;
+  }
+  .app-cards p {
+    display: none;
+  }
+
+  .header-text {
+    padding: 20px;
+  }
+
+  .header-text h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .header-text p {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin: 0 auto;
+  }
+  .app-cards {
+    padding: 0;
+  }
+  .app-cards p {
+    display: none;
+  }
+
+  .header-text {
+    padding: 20px;
+  }
+
+  .header-text h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .header-text p {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
