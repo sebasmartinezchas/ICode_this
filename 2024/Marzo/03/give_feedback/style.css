@@ -1,0 +1,140 @@
+/* Add CSS here */
+/*Reset default styles */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: #bbb8b877;
+}
+
+.container {
+  width: max(600px, 50vw);
+  height: max(600px, 50vh);
+  background: #fff;
+  margin: 5em auto;
+  border-radius: 8px;
+  text-align: center;
+  align-content: center;
+  box-shadow: 9px 10px 7px 6px rgba(0, 0, 0, 0.77);
+  -webkit-box-shadow: 9px 10px 7px 6px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 9px 10px 7px 6px rgba(0, 0, 0, 0.77);
+
+  @media (max-width: 600px) {
+    width: max(250px, 50vw);
+    height: max(750px, 50vh);
+  }
+}
+
+.header-text h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 5rem;
+
+  @media (max-width: 600px) {
+    font-size: 2.55rem;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.header-text p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: left;
+  padding: 2rem 8rem 2rem 5rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 1em;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  resize: none;
+  text-decoration: none;
+  border: 2px solid hsla(0, 4%, 24%, 0.596);
+  position: relative;
+}
+
+.text-area textarea {
+  padding: 3rem 9rem;
+  margin: 0;
+  width: 73%;
+
+  @media (max-width: 600px) {
+    padding: 5rem;
+    margin: 0;
+    width: 80%;
+  }
+}
+
+textarea::placeholder {
+  font-family: inherit;
+  color: rgb(122, 119, 119);
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.checkbox-1,
+.checkbox-2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 5rem;
+  width: 73%;
+  @media (max-width: 600px) {
+    margin: 1rem 0.5rem;
+  }
+}
+.checkbox-1 input,
+.checkbox-2 input {
+  width: 20px;
+  height: 20px;
+  @media (max-width: 600px) {
+    margin-left: 5px;
+  }
+}
+.checkbox-1 label,
+.checkbox-2 label {
+  margin-left: 5px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.checkbox-1 label span,
+.checkbox-2 label span {
+  text-decoration: underline;
+}
+.btn-feedback {
+  padding-top: 2rem;
+  @media (max-width: 600px) {
+    padding: 0;
+  }
+}
+.btn-feedback button {
+  width: 75%;
+  color: #fff;
+  background: #000;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
