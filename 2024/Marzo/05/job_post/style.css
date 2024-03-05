@@ -1,0 +1,157 @@
+/* Add CSS here */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(341, 100%, 85%) 50%,
+    hsl(235, 98%, 18%) 50%
+  );
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: grid;
+  grid-template-columns: 450px;
+  grid-template-rows: 1fr 1fr 65px;
+  padding-top: 1rem;
+  background: #fff;
+  border-radius: 8px;
+}
+.header {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-logo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1.5px solid rgb(207, 197, 197);
+  margin: 1rem;
+}
+.header-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+.header-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.header-body h1 {
+  font-size: 1rem;
+}
+.header-btn button {
+  padding: 0.5rem 1.3rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  color: rgb(34, 30, 30);
+  cursor: pointer;
+}
+.header-btn button:nth-child(1) {
+  color: rgb(29, 25, 25);
+  font-weight: 700;
+  background: white;
+}
+.header-btn button:nth-child(2) {
+  color: rgb(252, 238, 238);
+  font-weight: 700;
+  background: rgb(15, 15, 15);
+}
+.header-body :is(p, span) {
+  color: gray;
+  margin: 5px;
+  font-size: 1 em;
+  font-weight: 300;
+}
+.card-body {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  max-height: 8rem;
+  background: #f2f2f2;
+  padding: 2rem;
+  border-radius: 4px;
+}
+.card-body div {
+  color: rgb(73, 68, 68);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+}
+.card-body h2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+.card-body :is(h2, p) {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+footer {
+  text-align: center;
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+@media (max-width: 500px) {
+  .card {
+    grid-template-columns: 350px;
+  }
+  .header-logo img {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .card {
+    grid-template-columns: 250px;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+  .header-logo img {
+    display: none;
+  }
+  .header-body h1 {
+    font-size: 2rem;
+  }
+  .header-body p {
+    display: none;
+  }
+  .card-body {
+    grid-auto-flow: row;
+    max-height: 15rem;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  .card-body h2 {
+    border-bottom: 1px solid black;
+  }
+}
