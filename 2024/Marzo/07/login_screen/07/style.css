@@ -1,0 +1,63 @@
+Add CSS here *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  border: 1px solid red;
+  margin: 1rem;
+  padding: 1rem;
+  background: #000;
+}
+
+.card-inputs input[type="text"] {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/12/User_icon_2.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  background-position: center right;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  outline: none;
+}
+.card-inputs input[type="password"] {
+  background-image: url("https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/password-512.png");
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  background-position: center right;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  outline: none;
+}
+.card-inputs input:not(:placeholder-shown) {
+  background-image: none;
+}
+
+.card-inputs input::placeholder {
+  border-bottom: 1px solid lightseagreen;
+  font-size: 1rem;
+}
+.card-inputs-bottom {
+  display: flex;
+}
