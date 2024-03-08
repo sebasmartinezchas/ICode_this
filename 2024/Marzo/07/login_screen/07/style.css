@@ -4,30 +4,56 @@ Add CSS here *,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.6;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-image: url("https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
 }
-.cards {
-  display: flex;
-  justify-content: center;
+.container {
+  display: grid;
+  height: 100vh;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
 }
 .card {
-  border: 1px solid red;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 1.2rem;
+  background: rgb(71, 62, 62);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+.sign-in {
+  padding: 1rem 2.5rem;
   background: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.sign-up {
+  padding: 1rem 2rem;
+  background: white;
+  border: none;
+  color: green;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.card-inputs input[type="text"] {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/12/User_icon_2.svg");
+.card-inputs input[type='text'] {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/12/User_icon_2.svg');
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
   padding: 0.5rem;
@@ -37,9 +63,10 @@ body {
   font-family: inherit;
   font-size: 1.2rem;
   outline: none;
+  color: rgb(189, 182, 182);
 }
-.card-inputs input[type="password"] {
-  background-image: url("https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/password-512.png");
+.card-inputs input[type='email'] {
+  background-image: url('https://cdn1.iconfinder.com/data/icons/office-322/24/email-message-envelope-letter-256.png');
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
   padding: 0.5rem;
@@ -49,15 +76,127 @@ body {
   font-family: inherit;
   font-size: 1.2rem;
   outline: none;
+  color: rgb(189, 182, 182);
+}
+.card-inputs input[type='password'] {
+  background-image: url('https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/password-512.png');
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  background-position: center right;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  outline: none;
+  color: rgb(189, 182, 182);
 }
 .card-inputs input:not(:placeholder-shown) {
   background-image: none;
 }
 
 .card-inputs input::placeholder {
-  border-bottom: 1px solid lightseagreen;
+  border-bottom: 1px solid hsl(177, 72%, 65%);
   font-size: 1rem;
+  color: rgb(189, 182, 182);
 }
 .card-inputs-bottom {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+.card-inputs-bottom label {
+  color: rgb(189, 182, 182);
+  font-size: 0.7rem;
+}
+.card-inputs-bottom span {
+  color: rgb(189, 182, 182);
+  font-size: 0.7rem;
+  margin-left: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+:is(.logs, .card-inputs) {
+  display: grid;
+  grid-auto-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.logs {
+  padding-bottom: 8rem;
+}
+
+.login {
+  padding: 1rem 4rem;
+  background-color: rgb(126, 84, 7);
+
+  margin-top: 1rem;
+  button {
+    border: none;
+    color: white;
+    font-weight: 900;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+.logout {
+  background-color: rgb(0, 110, 255);
+  padding: 1rem 1.2rem;
+  border: none;
+  color: white;
+
+  button {
+    border: none;
+    color: white;
+    background: transparent;
+    font-weight: 100;
+    cursor: pointer;
+  }
+}
+.divition {
+  position: relative;
+  p {
+    color: #fff;
+    font-size: 0.7rem;
+  }
+}
+
+.divition::before {
+  content: '';
+  width: 1rem;
+  height: 1px;
+  background: hsl(177, 72%, 65%);
+  position: absolute;
+  top: 17px;
+  right: 18px;
+}
+
+.divition::after {
+  content: '';
+  width: 1rem;
+  height: 1px;
+  background: hsl(177, 72%, 65%);
+  position: absolute;
+  top: 17px;
+  left: 18px;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-auto-flow: row;
+  }
+  .card-header {
+    padding: 0;
+  }
+  .logs {
+    padding: 0;
+  }
+  .login {
+    padding: 0.5rem 1rem;
+  }
+  .logout {
+    padding: 0.5rem 1rem;
+  }
 }
