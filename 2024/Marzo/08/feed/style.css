@@ -1,0 +1,96 @@
+/* Add CSS here */
+:root {
+  /* Custom Properties */
+  /*Color */
+  --clr-white-soft: hsl(0, 57%, 95%);
+  --clr-gray-soft: hsla(0, 6%, 58%, 0.555);
+  --clr-blue-dark: hsla(239, 39%, 36%, 0.411);
+  --clr-bg-blue-light: hsl(222, 34%, 37%);
+  --clr-blue-lighter: hsl(222, 35%, 44%);
+
+  /* Sizes*/
+  --clr-btn-padding: 6px 40px;
+
+  /* Borders*/
+  --border-radius-1: 4px;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: var(--clr-bg-blue-light);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+h1 {
+  color: var(--clr-white-soft);
+  font-size: 1.5rem;
+  font-weight: 100;
+  letter-spacing: 1.2px;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.btn-meeting {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  justify-items: end;
+}
+.icons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.btn-meeting div:first-child {
+  margin-right: 1rem;
+
+  & button {
+    background: var(--clr-blue-dark);
+    color: var(--clr-white-soft);
+    border: none;
+    padding: var(--clr-btn-padding);
+    border-radius: var(--border-radius-1);
+  }
+}
+.btn-meeting div:last-child {
+  border: 1px solid var(--clr-blue-lighter);
+  & button {
+    background: var(--clr-blue-lighter);
+    color: var(--clr-white-soft);
+    border: none;
+    padding: var(--clr-btn-padding);
+    border-radius: var(--border-radius-1);
+  }
+}
+.icon-wrapper {
+  border: 1px solid var(-);
+  margin: 1.5rem 0 0 1.8rem;
+  background: var(--clr-blue-dark);
+}
+.icon-wrapper h2 {
+  font-size: 0.8rem;
+  color: var(--clr-white-soft);
+  font-weight: normal;
+  padding: 1.5rem 5rem 1.5rem 1rem;
+}
+.icon-wrapper i {
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  
+}
