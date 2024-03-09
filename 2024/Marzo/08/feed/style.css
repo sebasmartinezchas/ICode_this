@@ -1,4 +1,5 @@
-/* Add CSS here */
+/*Add CSS here*/
+
 :root {
   /* Custom Properties */
   /*Color */
@@ -9,7 +10,8 @@
   --clr-blue-lighter: hsl(222, 35%, 44%);
 
   /* Sizes*/
-  --clr-btn-padding: 6px 40px;
+  --sz-btn-padding: 6px 40px;
+  --sz-btn-padding-1: 6px 60px;
 
   /* Borders*/
   --border-radius-1: 4px;
@@ -23,7 +25,7 @@
   line-height: 1.6;
 }
 body {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   background: var(--clr-bg-blue-light);
 }
 .container {
@@ -47,7 +49,8 @@ h1 {
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   align-items: center;
-  justify-items: end;
+  justify-items: self-start;
+  width: 100%;
 }
 .icons {
   display: grid;
@@ -57,30 +60,34 @@ h1 {
   justify-items: center;
 }
 .btn-meeting div:first-child {
-  margin-right: 1rem;
-
   & button {
     background: var(--clr-blue-dark);
     color: var(--clr-white-soft);
-    border: none;
-    padding: var(--clr-btn-padding);
+    border: 1px solid var(--clr-blue-dark);
+    padding: var(--sz-btn-padding-1);
     border-radius: var(--border-radius-1);
+    cursor: pointer;
   }
 }
-.btn-meeting div:last-child {
+.btn-meeting div:nth-child(2) {
   border: 1px solid var(--clr-blue-lighter);
+  border-radius: var(--border-radius-1);
   & button {
     background: var(--clr-blue-lighter);
     color: var(--clr-white-soft);
     border: none;
-    padding: var(--clr-btn-padding);
-    border-radius: var(--border-radius-1);
+    padding: var(--sz-btn-padding-1);
+    cursor: pointer;
   }
 }
 .icon-wrapper {
   border: 1px solid var(-);
-  margin: 1.5rem 0 0 1.8rem;
+  margin-top: 1rem;
+  /* margin: 1.5rem 0 0 1.8rem; */
   background: var(--clr-blue-dark);
+  width: 100%;
+  border-radius: var(--border-radius-1);
+
 }
 .icon-wrapper h2 {
   font-size: 0.8rem;
@@ -88,9 +95,108 @@ h1 {
   font-weight: normal;
   padding: 1.5rem 5rem 1.5rem 1rem;
 }
-.icon-wrapper i {
-  font-size: 1.5rem;
-  cursor: pointer;
+.icon-wrapper p{
+  display: none;
+}
 
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:2rem;
+}
+ul li {
+  list-style: none;
   
+}
+ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #000;
+  transition:0.5;
+}
+ul li a:hover{
+  color: #8a917c83;
+}
+ul li a:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.5s cubic-bezier(.95,.32,.37,1.31);
+}
+ul li a:hover::before{
+  transform: scale(1);
+}
+@media screen and (max-width:600px){
+  h1{
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+  }
+  .btn-meeting{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  ul{
+    flex-direction: column;
+
+  }
+  .icon-wrapper h2{
+    font-size: 1.5rem;
+  padding: 1rem;
+  }
+}
+
+@media screen and (max-width:400px){
+  h1{
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+  }
+  .btn-meeting{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  ul{
+    flex-direction: column;
+    padding: 0;
+
+  }
+  .icon-wrapper{
+    max-width: 250px;
+  }
+  .icon-wrapper h2{
+    font-size: 1.5rem;
+  padding: 0 0.5rem;
+  }
+}
+li p{
+  visibility: hidden;
+}
+li p:hover{
+  visibility: visible;
 }
