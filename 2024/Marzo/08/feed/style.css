@@ -95,9 +95,6 @@ h1 {
   font-weight: normal;
   padding: 1.5rem 5rem 1.5rem 1rem;
 }
-.icon-wrapper p{
-  display: none;
-}
 
 ul {
   display: flex;
@@ -194,9 +191,4 @@ ul li a:hover::before{
   padding: 0 0.5rem;
   }
 }
-li p{
-  visibility: hidden;
-}
-li p:hover{
-  visibility: visible;
-}
+

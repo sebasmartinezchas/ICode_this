@@ -1,0 +1,143 @@
+/*Add CSS here*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  margin: auto;
+}
+
+.mindmap {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+}
+p {
+  text-align: center;
+}
+.mindmap__main {
+  grid-column: 1/9;
+  grid-row: 4/6;
+  box-shadow: 4px 10px 13px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 4px 10px 13px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 4px 10px 13px 0px rgba(0, 0, 0, 0.21);
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+.mindmap__intuitive {
+  grid-column: 1/7;
+  grid-row: 1/2;
+  background-color: #faebd7;
+  border-radius: 1.2rem 1.2rem 0 0;
+  padding: 0.5rem;
+  border-bottom: 8px solid #36343254;
+}
+.mindmap__memory {
+  grid-column: 1/6;
+  grid-row: 8/9;
+  background-color: #bd8598bd;
+  border-radius: 1.2rem 1.2rem 0 0;
+  padding: 0.5rem;
+  border-bottom: 8px solid #bd8598bd;
+}
+.mindmap__collaboration {
+  grid-column: 6/9;
+  grid-row: 2/3;
+  background-color: #85bda8be;
+  border-radius: 1.2rem 1.2rem 0 0;
+  padding: 0.5rem;
+  border-bottom: 8px solid #85bda8be;
+}
+.mindmap__focus {
+  grid-column: 1/6;
+  grid-row: 6/7;
+  background-color: #2e1b9bbe;
+  border-radius: 1.2rem 1.2rem 0 0;
+  padding: 0.5rem;
+  border-bottom: 8px solid #2e1b9bbe;
+}
+.clutter {
+  grid-column: 6/8;
+  grid-row: 5/6;
+}
+.overview {
+  grid-column: 5/8;
+  grid-row: 6/7;
+}
+.idea {
+  grid-column: 6/8;
+  grid-row: 7/9;
+}
+
+@media (min-width: 660px) {
+  .mindmap p {
+    font-size: 2rem;
+  }
+  .idea {
+    grid-column: 6/9;
+    grid-row: 7/9;
+  }
+  .clutter {
+    grid-column: 5/9;
+    grid-row: 5/7;
+  }
+  .overview {
+    grid-column: 5/9;
+    grid-row: 6/8;
+  }
+}
+@media (min-width: 960px) {
+  .mindmap p {
+    font-size: 2.5rem;
+  }
+  .idea {
+    grid-column: 6/9;
+    grid-row: 7/9;
+  }
+  .clutter {
+    grid-column: 5/9;
+    grid-row: 5/7;
+  }
+  .overview {
+    grid-column: 5/9;
+    grid-row: 6/8;
+  }
+}
+@media (min-width: 1200px) {
+  .mindmap p {
+    font-size: 3rem;
+  }
+  .idea {
+    grid-column: 6/9;
+    grid-row: 7/9;
+  }
+  .clutter {
+    grid-column: 5/9;
+    grid-row: 5/7;
+  }
+  .overview {
+    grid-column: 5/9;
+    grid-row: 6/8;
+  }
+}
