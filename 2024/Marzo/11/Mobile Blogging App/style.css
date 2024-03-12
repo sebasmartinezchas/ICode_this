@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-image: linear-gradient(
     to top left,
     hsl(225, 88%, 38%),
@@ -24,7 +24,6 @@ body {
   align-items: center;
   height: 100vh;
   width: 90%;
- 
 }
 .icon-close {
   display: flex;
@@ -76,10 +75,8 @@ body {
 }
 .card-1 {
   background: #1f2fc4;
-margin-left:2rem;
+  margin-left: 2rem;
   border-radius: 6px;
-
-
 }
 
 .icons {
@@ -122,6 +119,6 @@ margin-left:2rem;
   background: #3b3939;
 }
 
-.hide{
+.hide {
   display: none;
 }
