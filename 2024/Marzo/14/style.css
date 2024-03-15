@@ -2,7 +2,8 @@
   --clr-bg-primary: #6490ad6b;
   --clr-bg-secondary: #fcf5f5;
   --clr-btn-primary: #3b2ec9;
-  --box-shadow-1: 2px 5px 12px rgb(29, 23, 23);
+  --box-shadow-1: 4px 3px 15px rgb(29, 23, 23);
+ --box-shadow-2:2px 5px 12px #3b2ec9;
   --sz-padding-card1: 2rem 4rem;
   --sz-padding-card2: 1.5rem 3rem;
   --sz-padding-card3: 1rem 2rem;
@@ -38,7 +39,7 @@ body {
   border: 1px solid red;
 }
 .filter {
-  grid-column: 3/4;
+  grid-column: 2/4;
   grid-row: 4/7;
   background: var(--clr-bg-secondary);
   border-radius: var(--sz-bd-radius1);
@@ -57,18 +58,24 @@ body {
 .btn {
   border-radius: var(--sz-bd-radius1);
   background: var(--clr-btn-primary);
+  box-shadow: var(--box-shadow-2);
   color: white;
   padding: 0.2rem 0.5rem;
   border: none;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.btn:hover{
+  background: #6176eb;
+  color: white;
 }
 .filter__select {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 
 .filter__select input {
@@ -79,7 +86,19 @@ body {
 }
 label {
   font-size: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease-in-out ;
+
 }
+
+.filter__select input[type="checkbox"]:checked + label{
+  background: var(--clr-btn-primary);
+  box-shadow: var(--box-shadow-2);
+  border-radius: var(--sz-bd-radius3);
+  color: var(--clr-bg-secondary);
+}
+
 .actions {
   grid-column: 4/6;
   grid-row: 4/5;
@@ -90,12 +109,12 @@ label {
   color: #000;
   padding: 0.5rem 1.2rem;
   margin: 0.3rem;
+  box-shadow: var(--box-shadow-1);
 }
 .certificates {
   grid-column: 4/6;
   grid-row: 5/7;
-  border: 1px solid red;
-  border: 8px solid rgb(192, 180, 180);
+  border: 8px double rgb(192, 180, 180);
   border-radius: var(--sz-bd-radius1);
   margin-bottom: 2.2rem;
 }
