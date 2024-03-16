@@ -7,6 +7,11 @@
 }
 body {
   font-family: "Jost", sans-serif;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
 }
 .container {
   display: grid;
@@ -17,6 +22,7 @@ body {
   margin: 2rem auto;
   height: 100vh;
   border: 1px solid red;
+
 }
 
 .slider {
@@ -24,14 +30,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1100px;
-  /* overflow-x: hidden; */
+  max-width: 900px;
   position: relative;
 }
 .slider__gallery {
   display: flex;
-  flex-wrap: wrap;
-  background-position: center center;
+flex-wrap:nowrap;
+  overflow-x: scroll;
+  scroll-behavior: auto;
+
 
 
 }
