@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body {
+  font-family: "Almarai", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    125deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(92, 164, 88, 0.28899082568807344) 40%,
+    rgba(17, 201, 220, 1) 44%,
+    rgba(0, 212, 255, 1) 52%
+  );
+}
+.post__card {
+  max-width: 1200px;
+  max-height: 600px;
+  background: #fff;
+  border-radius: 12px;
+  position: relative;
+}
+h1 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 1rem;
+}
+textarea {
+  resize: none;
+  padding: 1rem 6rem 1rem 0.5rem;
+  border: none;
+}
+.post__icons {
+  display: flex;
+  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.icon label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.post__send {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+input[type="file"] {
+  display: none;
+}
+.post__send {
+  cursor: pointer;
+}
+
+@media(max-width:420px){
+  .post__icons{
+    flex-direction: column;
+  }
+}
