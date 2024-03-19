@@ -12,7 +12,7 @@
   height: 100vh;
 }
 body {
-  font-family: "Almarai", sans-serif;
+  font-family: 'Almarai', sans-serif;
   font-size: 1.2rem;
   line-height: 1.5;
   background: rgb(2, 0, 36);
@@ -32,14 +32,16 @@ body {
   position: relative;
 }
 h1 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
   padding: 1rem;
 }
 textarea {
   resize: none;
-  padding: 1rem 6rem 1rem 0.5rem;
+  padding: 1rem 6rem;
   border: none;
+  width: 90%;
+  margin: 1rem;
 }
 .post__icons {
   display: flex;
@@ -54,9 +56,17 @@ textarea {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 4rem;
   cursor: pointer;
-  cursor: pointer;
+  max-width: 200px;
+  max-height: 150px;
+  transition: all 0.5s ease-in 0.3s;
+  text-align: center;
+}
+.icon label:hover {
+  background-color: #ccc;
+  color: white;
+  border-radius: 50%;
 }
 
 .post__send {
@@ -64,15 +74,30 @@ textarea {
   top: 5px;
   right: 15px;
 }
-input[type="file"] {
+input[type='file'] {
   display: none;
 }
 .post__send {
   cursor: pointer;
 }
 
-@media(max-width:420px){
-  .post__icons{
+@media (max-width: 760px) {
+  h1{
+    font-size: 2rem;
+  }
+ textarea{
+  padding: 2rem 1rem;
+  font-size: 1.5rem;
+ }
+  .post__icons {
     flex-direction: column;
   }
+  .post__card{
+    max-height: 1200px;
+    max-width: 280px;
+  }
+  .icon label{
+    font-size: 1.5rem;
+  }
+
 }
