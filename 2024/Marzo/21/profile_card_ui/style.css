@@ -1,11 +1,7 @@
-/*
-colors
-CFE8EF
-C6DBF0
-AED1E6
-A0C4E2
-85C7DE
-*/
+
+/*  /////////////
+Reset
+/////////////*/
 
 *,
 *::after,
@@ -14,6 +10,9 @@ A0C4E2
   margin: 0;
   padding: 0;
 }
+/*  /////////////
+End of Reset
+/////////////*/
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
