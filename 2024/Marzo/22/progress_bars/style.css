@@ -19,6 +19,12 @@ body {
 }
 .container {
   text-align: center;
+  max-width: 350px;
+  
+}
+.container button{
+  display: inline-block;
+margin-left:40px;
 }
 .progress__container {
   display: flex;
@@ -27,7 +33,7 @@ body {
   margin: 30px;
   max-width: 100%;
   width: 350px;
-  border: 2px solid green;
+
 }
 .progress__container::before{
   content: "";
